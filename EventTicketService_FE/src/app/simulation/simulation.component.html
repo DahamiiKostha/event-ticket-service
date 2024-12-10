@@ -1,0 +1,34 @@
+
+  <!-- Full-page background image -->
+  <img src="Picture5.png" alt="Background Image" class="background-image" />
+<body>
+  <!-- Main simulation container -->
+  <div class="simulation-container">
+    <!-- Title Section -->
+    <header class="simulation-header">
+      <h1>Control Panel</h1>
+      <p>
+        Use the buttons below to turn the simulation Start or Stop. The current status will be displayed in real-time.
+      </p>
+    </header>
+    <div class="button-container">
+      <!-- Conditional Button Logic with Angular -->
+      <button *ngIf="!isSimulationRunning" (click)="startSimulation()" class="simulation-button">Start Simulation</button>
+      <button *ngIf="isSimulationRunning" (click)="stopSimulation()" class="simulation-button">Stop Simulation</button>
+    </div>
+
+    <!-- Content Section -->
+    <section class="simulation-content">
+      <h2>What is this Simulation?</h2>
+      <p>
+        This simulation allows you to control an interactive system where the button states represent different modes of operation.
+        You can explore dynamic changes by toggling between "Start Simulation" and "Stop Simulation"
+      </p>
+      <ul>
+        <strong>Start Simulation:</strong> Enables the simulation and activates interactive features.<br>
+        <strong>Stop Simulation:</strong> Disables the simulation and pauses all processes.
+      </ul>
+    </section>
+  </div>
+</body>
+

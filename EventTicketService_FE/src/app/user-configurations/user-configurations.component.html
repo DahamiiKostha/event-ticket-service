@@ -1,0 +1,82 @@
+<div class="home-container">
+  <!-- Background Image -->
+  <img src="Picture3.png" alt="Background Image" class="background-image" />
+
+  <div class="content-container">
+    <!-- Left Side Image -->
+    <div class="image-container">
+      <img src="Picture4.png" alt="Left Side Image" class="side-image" />
+    </div>
+      <!-- Form Section -->
+      <div class="form-container">
+        <h1 class="form-title"><b>Configuration Form</b></h1>
+        <form id="userForm" class="form-content" (ngSubmit)="handleSubmit()" #configForm="ngForm">
+          <div class="form-group">
+            <label for="totalTickets">Total Tickets:</label>
+            <input 
+              type="number" 
+              id="totalTickets" 
+              name="totalTickets" 
+              required 
+              min="1" 
+              [(ngModel)]="userConfigurations.totalTickets" 
+              #totalTickets="ngModel" 
+            />
+            <div *ngIf="totalTickets.invalid && totalTickets.touched" class="error">
+              Total Tickets must be a valid positive integer.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ticketReleaseRate">Ticket Release Rate:</label>
+            <input 
+              type="number" 
+              id="ticketReleaseRate" 
+              name="ticketReleaseRate" 
+              required 
+              min="1" 
+              [(ngModel)]="userConfigurations.ticketReleaseRate" 
+              #ticketReleaseRate="ngModel" 
+            />
+            <div *ngIf="ticketReleaseRate.invalid && ticketReleaseRate.touched" class="error">
+              Ticket Release Rate must be a valid positive integer.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customerRetrievalRate">Customer Retrieval Rate:</label>
+            <input 
+              type="number" 
+              id="customerRetrievalRate" 
+              name="customerRetrievalRate" 
+              required 
+              min="1" 
+              [(ngModel)]="userConfigurations.customerRetrievalRate" 
+              #customerRetrievalRate="ngModel" 
+            />
+            <div *ngIf="customerRetrievalRate.invalid && customerRetrievalRate.touched" class="error">
+              Customer Retrieval Rate must be a valid positive integer.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="maxTicketCapacity">Max Ticket Capacity:</label>
+            <input 
+              type="number" 
+              id="maxTicketCapacity" 
+              name="maxTicketCapacity" 
+              required 
+              min="1" 
+              [(ngModel)]="userConfigurations.maxTicketCapacity" 
+              #maxTicketCapacity="ngModel" 
+            />
+            <div *ngIf="maxTicketCapacity.invalid && maxTicketCapacity.touched" class="error">
+              Max Ticket Capacity must be a valid positive integer.
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit" [disabled]="configForm.invalid">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>

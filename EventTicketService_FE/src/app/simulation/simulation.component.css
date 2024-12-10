@@ -1,0 +1,165 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-page background image */
+.background-image {
+  position: fixed; /* Fix the image in the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image stretches properly without distortion */
+  z-index: -1; /* Place it behind all content */
+}
+
+/* Full Page Body Styling */
+body {
+  height: 90vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: none; /* Remove any accidental background color */
+}
+
+/* Main Container (Simulation Box) */
+.simulation-container {
+  max-width: 1200px;
+  width: 90%;
+  padding: 30px;
+  background-color: rgba(21, 19, 19, 0.407); /* Add semi-transparent white background for clarity */
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out;
+  align-items: center;
+
+  /* Add the blur effect */
+  backdrop-filter: blur(8px); /* Apply a blur effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+}
+
+/* Title Section */
+.simulation-header {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 4px solid #afbac7;
+  color: #fefcfc;
+}
+
+.simulation-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.simulation-header p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #f1ecec;
+  line-height: 1.7;
+}
+
+/* Buttons Section */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.simulation-button {
+  background: #6d9db655;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.simulation-button:hover {
+  transform: translateY(-3px);
+  background: #b8d9ee63;
+  color: rgb(7, 10, 11);
+  box-shadow: 0 2px 6px rgb(48, 49, 50);
+}
+
+/* Content Section */
+.simulation-content {
+  text-align: center;
+  color: #f4efef;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.simulation-content h2 {
+  font-size: 28px;
+  color: #f9f7f7;
+  margin-bottom: 10px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .simulation-container {
+    padding: 20px;
+  }
+
+  .simulation-header h1 {
+    font-size: 28px;
+  }
+
+  .simulation-content h2 {
+    font-size: 24px;
+  }
+
+  .simulation-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simulation-header h1 {
+    font-size: 22px;
+  }
+
+  .simulation-content h2 {
+    font-size: 20px;
+  }
+
+  .simulation-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}

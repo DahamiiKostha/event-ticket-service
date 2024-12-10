@@ -1,0 +1,13 @@
+/* Import Bitter font */
+@font-face {
+    font-family: 'Bitter';
+    src: url('/public/Bitter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Apply the font globally */
+  body {
+    font-family: 'Bitter', sans-serif;
+  }
+  

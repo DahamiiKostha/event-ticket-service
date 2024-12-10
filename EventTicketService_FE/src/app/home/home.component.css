@@ -1,0 +1,114 @@
+/* Import Bitter font */
+@font-face {
+  font-family: 'Bitter';
+  src: url('/public/Bitter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Bitter font globally */
+body {
+  font-family: 'Bitter', sans-serif;
+}
+
+:host {
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full container */
+  z-index: -1; /* Sends the image behind the content */
+}
+
+.overlay {
+  height: 92%;
+  width: 100%;
+  display: flex;
+  align-items: top; /* Center vertically */
+  justify-content: top; /* Center horizontally */
+  animation: zoomIn 1.5s ease-out; /* Updated animation */
+}
+
+.text-container {
+  text-align: center;
+  margin-left: 30px;
+  color: #090909;
+  padding: 20px;
+  font-family: 'Bitter', sans-serif;
+  animation: zoomIn 1.5s ease-out; /* Updated animation */
+}
+
+.title {
+  font-size: 45px;
+  font-weight: bold;
+  color: #333; /* Matches dark text used in navbar */
+  margin-bottom: 10px;
+  animation: zoomIn 1.5s ease-out; /* Updated animation */
+}
+
+.description {
+  font-size: 14px;
+  font-weight: normal; /* Consistent weight for description text */
+  color: #555; /* Subtle gray for description text */
+  line-height: 1.6; /* Improved readability */
+  margin-bottom: 20px;
+  margin-right: 40px;
+  animation: zoomIn 2s ease-out; /* Updated animation */
+}
+
+.ticket-box {
+  background: rgba(15, 14, 14, 0.8);
+  padding: 15px; /* Adjusted padding for button-like appearance */
+  border-radius: 40px;
+  display: inline-block;
+  font-family: 'Bitter', sans-serif; /* Ensures font consistency */
+  text-align: center;
+  color: #f7f4f4;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer; /* Changes the pointer to a hand cursor on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  animation: zoomIn 1.5s ease-out; /* Updated animation */
+}
+
+.ticket-box:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  background: #5588aa; /* Changes background color on hover */
+  color: #fff; /* Changes text color for better contrast */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.ticket-count {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Keyframe Animations */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); /* Start slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}

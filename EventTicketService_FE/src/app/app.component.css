@@ -1,0 +1,107 @@
+/* Import the Bitter font */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;600&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bitter', serif;
+}
+
+/* Navbar Styling */
+.navbar-custom {
+  height: 60px;
+  background-color: #333;
+  border-bottom: 4px solid #b7b4b4;
+  transition: background-color 0.2s ease;
+}
+
+/* Navbar Brand (Logo) Styling */
+.navbar-brand {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #c1cbdc93;
+}
+
+/* Navigation Menu */
+.center-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+  gap: 15px;
+  margin-right: 8%;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-item .nav-link {
+  color: #e0e0e0;
+  font-size: 16px;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #e6e5e51a;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  gap: 8px;
+  flex: 1; /* Allow links to adapt in size on smaller screens */
+  min-width: 120px; /* Ensure links remain readable */
+  justify-content: center; /* Center content inside links */
+}
+
+/* Active State with Click */
+.navbar-nav .nav-item .nav-link:focus,
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #5588aa;
+  color: #fff;
+}
+
+/* Icon Styling */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover Effects */
+.navbar-nav .nav-item:hover .nav-link {
+  background-color: #5588aa;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .center-nav {
+    flex-direction: column; /* Stack links vertically */
+    align-items: stretch; /* Ensure full-width links */
+    gap: 10px;
+  }
+
+  .navbar-custom {
+    height: auto; /* Adjust navbar height */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 18px; /* Adjust logo font size */
+  }
+
+  .nav-icon {
+    width: 16px; /* Smaller icons for smaller screens */
+    height: 16px;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 14px; /* Smaller text */
+    padding: 5px 10px; /* Adjust padding */
+  }
+}
