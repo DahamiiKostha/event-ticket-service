@@ -1,0 +1,282 @@
+2024-12-10 01:23:27 [main] INFO  c.o.e.EventTicketServiceApplication - Starting EventTicketServiceApplication using Java 23.0.1 with PID 323005 (/home/dhami/Documents/cw/EventTIcketService_BE/target/classes started by dhami in /home/dhami/Documents/cw/EventTIcketService_BE)
+2024-12-10 01:23:27 [main] INFO  c.o.e.EventTicketServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-10 01:23:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-10 01:23:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2024-12-10 01:23:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-10 01:23:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-10 01:23:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-10 01:23:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-10 01:23:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-10 01:23:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1824 ms
+2024-12-10 01:23:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-10 01:23:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-10 01:23:29 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-10 01:23:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-10 01:23:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-10 01:23:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6963b0bd
+2024-12-10 01:23:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-10 01:23:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-10 01:23:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-10 01:23:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 01:23:31 [main] INFO  c.o.e.c.C.ConfigurationManager - Loading user configurations from file...
+2024-12-10 01:23:31 [main] INFO  c.o.e.u.f.ConfigurationIO - Config loaded successfully
+2024-12-10 01:23:31 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully loaded: UserConfigurations{totalTickets=10, ticketReleaseRate=2, customerRetrievalRate=2, maxTicketCapacity=5}
+2024-12-10 01:23:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-10 01:23:32 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-10 01:23:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-10 01:23:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-10 01:23:32 [main] INFO  c.o.e.EventTicketServiceApplication - Started EventTicketServiceApplication in 6.003 seconds (process running for 6.703)
+2024-12-10 01:24:31 [UserInputListenerThread] INFO  c.o.e.c.p.logs.PromptLogs - Stopping log reader and user input listener...
+2024-12-10 01:24:33 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 01:24:33 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 01:24:33 [main] INFO  c.o.e.s.t.ThreadHandler - Starting 2 producer threads...
+2024-12-10 01:24:33 [main] INFO  c.o.e.s.t.ThreadHandler - Starting 2 consumer threads...
+2024-12-10 01:24:57 [Consumer-0] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 01:24:59 [Consumer-0] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Miss Cornelia Cummerata | consumed ticket: The Lathe of Heaven
+2024-12-10 01:24:59 [Producer-1] INFO  c.o.e.s.t.producer.TicketProducer - Vendor McKenzie-Deckow | produced ticket: Ticket{id=2, name='The Lathe of Heaven', price=335}
+2024-12-10 01:25:04 [Consumer-1] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 01:25:32 [Producer-0] INFO  c.o.e.s.t.producer.TicketProducer - Vendor McKenzie-Deckow | produced ticket: Ticket{id=2, name='The Lathe of Heaven', price=335}
+2024-12-10 01:25:32 [Consumer-1] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Kiersten Roberts | consumed ticket: The Lathe of Heaven
+2024-12-10 01:25:33 [Consumer-0] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 01:25:49 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 01:25:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-10 01:25:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-10 11:40:01 [main] INFO  c.o.e.EventTicketServiceApplication - Starting EventTicketServiceApplication using Java 23.0.1 with PID 73149 (/home/dhami/Documents/cw/EventTIcketService_BE/target/classes started by dhami in /home/dhami/Documents/cw/EventTIcketService_BE)
+2024-12-10 11:40:01 [main] INFO  c.o.e.EventTicketServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-10 11:40:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-10 11:40:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2024-12-10 11:40:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-10 11:40:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-10 11:40:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-10 11:40:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-10 11:40:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-10 11:40:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1971 ms
+2024-12-10 11:40:04 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-10 11:40:04 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-10 11:40:04 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-10 11:40:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-10 11:40:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-10 11:40:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@642ec6
+2024-12-10 11:40:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-10 11:40:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-10 11:40:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-10 11:40:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 11:40:06 [main] INFO  c.o.e.c.C.ConfigurationManager - Loading user configurations from file...
+2024-12-10 11:40:06 [main] INFO  c.o.e.u.f.ConfigurationIO - Config loaded successfully
+2024-12-10 11:40:06 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully loaded: UserConfigurations{totalTickets=10, ticketReleaseRate=2, customerRetrievalRate=2, maxTicketCapacity=5}
+2024-12-10 11:40:06 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-10 11:40:07 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-10 11:40:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-10 11:40:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-10 11:40:07 [main] INFO  c.o.e.EventTicketServiceApplication - Started EventTicketServiceApplication in 6.359 seconds (process running for 7.249)
+2024-12-10 11:40:13 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 11:40:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-10 11:40:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-10 12:01:53 [main] INFO  c.o.e.EventTicketServiceApplication - Starting EventTicketServiceApplication using Java 23.0.1 with PID 81414 (/home/dhami/Documents/cw/EventTIcketService_BE/target/classes started by dhami in /home/dhami/Documents/cw/EventTIcketService_BE)
+2024-12-10 12:01:53 [main] INFO  c.o.e.EventTicketServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-10 12:01:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-10 12:01:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2024-12-10 12:01:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-10 12:01:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:01:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-10 12:01:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-10 12:01:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-10 12:01:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1716 ms
+2024-12-10 12:01:55 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-10 12:01:55 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-10 12:01:55 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-10 12:01:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-10 12:01:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-10 12:01:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d4bdbd8
+2024-12-10 12:01:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-10 12:01:55 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-10 12:01:56 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-10 12:01:56 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:01:57 [main] INFO  c.o.e.c.C.ConfigurationManager - Loading user configurations from file...
+2024-12-10 12:01:57 [main] INFO  c.o.e.u.f.ConfigurationIO - Config loaded successfully
+2024-12-10 12:01:57 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully loaded: UserConfigurations{totalTickets=10, ticketReleaseRate=2, customerRetrievalRate=2, maxTicketCapacity=5}
+2024-12-10 12:01:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-10 12:01:58 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-10 12:01:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:01:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-10 12:01:58 [main] INFO  c.o.e.EventTicketServiceApplication - Started EventTicketServiceApplication in 5.689 seconds (process running for 6.398)
+2024-12-10 12:02:55 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 12:02:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-10 12:02:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-10 12:02:55 [http-nio-8080-exec-2] INFO  c.o.e.c.C.ConfigurationManager - Updating user configurations...
+2024-12-10 12:02:55 [http-nio-8080-exec-2] INFO  c.o.e.u.f.ConfigurationIO - Config saved successfully
+2024-12-10 12:02:55 [http-nio-8080-exec-2] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 12:02:55 [http-nio-8080-exec-2] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 12:02:55 [http-nio-8080-exec-2] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully saved and dependencies updated: UserConfigurations{totalTickets=100, ticketReleaseRate=20, customerRetrievalRate=20, maxTicketCapacity=60}
+2024-12-10 12:02:55 [http-nio-8080-exec-2] INFO  c.o.e.c.c.UserConfigurationsController - User configurations updated successfully
+2024-12-10 12:11:36 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:11:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-10 12:11:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-10 12:11:40 [main] INFO  c.o.e.EventTicketServiceApplication - Starting EventTicketServiceApplication using Java 23.0.1 with PID 86821 (/home/dhami/Documents/cw/EventTIcketService_BE/target/classes started by dhami in /home/dhami/Documents/cw/EventTIcketService_BE)
+2024-12-10 12:11:40 [main] INFO  c.o.e.EventTicketServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-10 12:11:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-10 12:11:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2024-12-10 12:11:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-10 12:11:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:11:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-10 12:11:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-10 12:11:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-10 12:11:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1761 ms
+2024-12-10 12:11:42 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-10 12:11:42 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-10 12:11:42 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-10 12:11:42 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-10 12:11:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-10 12:11:43 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b561f51
+2024-12-10 12:11:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-10 12:11:43 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-10 12:11:44 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-10 12:11:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:11:44 [main] INFO  c.o.e.c.C.ConfigurationManager - Loading user configurations from file...
+2024-12-10 12:11:44 [main] INFO  c.o.e.u.f.ConfigurationIO - Config loaded successfully
+2024-12-10 12:11:44 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully loaded: UserConfigurations{totalTickets=100, ticketReleaseRate=20, customerRetrievalRate=20, maxTicketCapacity=60}
+2024-12-10 12:11:44 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-10 12:11:45 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-10 12:11:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:11:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-10 12:11:45 [main] INFO  c.o.e.EventTicketServiceApplication - Started EventTicketServiceApplication in 5.993 seconds (process running for 6.67)
+2024-12-10 12:11:45 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 12:11:45 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-10 12:11:45 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-10 12:11:56 [http-nio-8080-exec-1] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 12:11:56 [http-nio-8080-exec-1] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 12:11:56 [http-nio-8080-exec-1] INFO  c.o.e.s.t.ThreadHandler - Starting 20 producer threads...
+2024-12-10 12:11:56 [http-nio-8080-exec-1] INFO  c.o.e.s.t.ThreadHandler - Starting 17 consumer threads...
+2024-12-10 12:11:57 [Consumer-13] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:11:59 [Consumer-5] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:02 [Consumer-5] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:02 [Consumer-13] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Ms. Carlee Herzog | consumed ticket: The Sun Also Rises
+2024-12-10 12:12:02 [Producer-1] INFO  c.o.e.s.t.producer.TicketProducer - Vendor Kohler-Weber | produced ticket: Ticket{id=4, name='The Sun Also Rises', price=803}
+2024-12-10 12:12:02 [Consumer-5] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Kiersten Roberts | consumed ticket: Oh! To be in England
+2024-12-10 12:12:02 [Producer-9] INFO  c.o.e.s.t.producer.TicketProducer - Vendor Blanda-Grant | produced ticket: Ticket{id=1, name='Oh! To be in England', price=966}
+2024-12-10 12:12:02 [Consumer-8] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:03 [Consumer-6] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:04 [Consumer-0] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:05 [Consumer-0] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:05 [Producer-7] INFO  c.o.e.s.t.producer.TicketProducer - Vendor McKenzie-Deckow | produced ticket: Ticket{id=5, name='An Instant In The Wind', price=247}
+2024-12-10 12:12:05 [Consumer-8] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Jason Halvorson | consumed ticket: An Instant In The Wind
+2024-12-10 12:12:05 [Consumer-6] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:05 [Consumer-2] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:12:08 [http-nio-8080-exec-2] INFO  c.o.e.s.t.ThreadHandler - Stopping all producer consumer threads...
+2024-12-10 12:12:08 [Consumer-6] ERROR c.o.e.core.ticket.TicketPool - Thread interrupted while retrieving a ticket: null
+2024-12-10 12:12:08 [Consumer-0] ERROR c.o.e.core.ticket.TicketPool - Thread interrupted while retrieving a ticket: null
+2024-12-10 12:12:08 [Consumer-6] WARN  c.o.e.s.t.consumer.TicketConsumer - No ticket retrieved for customer Pamela DuBuque due to interruption.
+2024-12-10 12:12:08 [Consumer-2] ERROR c.o.e.core.ticket.TicketPool - Thread interrupted while retrieving a ticket: null
+2024-12-10 12:12:08 [Consumer-0] WARN  c.o.e.s.t.consumer.TicketConsumer - No ticket retrieved for customer Gene Zboncak due to interruption.
+2024-12-10 12:12:08 [Consumer-2] WARN  c.o.e.s.t.consumer.TicketConsumer - No ticket retrieved for customer Jason Halvorson due to interruption.
+2024-12-10 12:13:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:13:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-10 12:13:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-10 12:14:01 [main] INFO  c.o.e.EventTicketServiceApplication - Starting EventTicketServiceApplication using Java 23.0.1 with PID 88519 (/home/dhami/Documents/cw/EventTIcketService_BE/target/classes started by dhami in /home/dhami/Documents/cw/EventTIcketService_BE)
+2024-12-10 12:14:01 [main] INFO  c.o.e.EventTicketServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-10 12:14:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-10 12:14:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2024-12-10 12:14:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-10 12:14:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:14:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-10 12:14:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-10 12:14:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-10 12:14:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1710 ms
+2024-12-10 12:14:03 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-10 12:14:03 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-10 12:14:03 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-10 12:14:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-10 12:14:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-10 12:14:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e5b2630
+2024-12-10 12:14:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-10 12:14:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-10 12:14:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-10 12:14:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:14:06 [main] INFO  c.o.e.c.C.ConfigurationManager - Loading user configurations from file...
+2024-12-10 12:14:06 [main] INFO  c.o.e.u.f.ConfigurationIO - Config loaded successfully
+2024-12-10 12:14:06 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully loaded: UserConfigurations{totalTickets=100, ticketReleaseRate=20, customerRetrievalRate=20, maxTicketCapacity=60}
+2024-12-10 12:14:06 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-10 12:14:07 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-10 12:14:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:14:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-10 12:14:07 [main] INFO  c.o.e.EventTicketServiceApplication - Started EventTicketServiceApplication in 6.023 seconds (process running for 6.688)
+2024-12-10 12:14:07 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 12:14:07 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-10 12:14:07 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-10 12:14:25 [main] INFO  c.o.e.c.C.ConfigurationManager - Updating user configurations...
+2024-12-10 12:14:25 [main] INFO  c.o.e.u.f.ConfigurationIO - Config saved successfully
+2024-12-10 12:14:25 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 12:14:25 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 12:14:25 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully saved and dependencies updated: UserConfigurations{totalTickets=10, ticketReleaseRate=2, customerRetrievalRate=2, maxTicketCapacity=5}
+2024-12-10 12:14:52 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 12:14:52 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 12:14:52 [main] INFO  c.o.e.s.t.ThreadHandler - Starting 2 producer threads...
+2024-12-10 12:14:52 [main] INFO  c.o.e.s.t.ThreadHandler - Starting 2 consumer threads...
+2024-12-10 12:15:01 [Consumer-0] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:15:03 [Consumer-0] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Kiersten Roberts | consumed ticket: The Sun Also Rises
+2024-12-10 12:15:03 [Producer-1] INFO  c.o.e.s.t.producer.TicketProducer - Vendor McKenzie-Deckow | produced ticket: Ticket{id=4, name='The Sun Also Rises', price=803}
+2024-12-10 12:15:07 [Consumer-1] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:15:38 [Producer-0] INFO  c.o.e.s.t.producer.TicketProducer - Vendor Kohler-Weber | produced ticket: Ticket{id=2, name='The Lathe of Heaven', price=335}
+2024-12-10 12:15:38 [Consumer-1] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Lane Shanahan | consumed ticket: The Lathe of Heaven
+2024-12-10 12:15:48 [UserInputListenerThread] INFO  c.o.e.c.p.logs.PromptLogs - Stopping log reader and user input listener...
+2024-12-10 12:15:49 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:15:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-10 12:15:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-10 12:17:25 [main] INFO  c.o.e.EventTicketServiceApplication - Starting EventTicketServiceApplication using Java 23.0.1 with PID 90336 (/home/dhami/Documents/cw/EventTIcketService_BE/target/classes started by dhami in /home/dhami/Documents/cw/EventTIcketService_BE)
+2024-12-10 12:17:25 [main] INFO  c.o.e.EventTicketServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-10 12:17:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-10 12:17:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2024-12-10 12:17:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-10 12:17:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:17:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-10 12:17:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-10 12:17:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-10 12:17:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2402 ms
+2024-12-10 12:17:28 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-10 12:17:28 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-10 12:17:28 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-10 12:17:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-10 12:17:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-10 12:17:29 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75ac326f
+2024-12-10 12:17:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-10 12:17:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-10 12:17:30 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-10 12:17:30 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:17:30 [main] INFO  c.o.e.c.C.ConfigurationManager - Loading user configurations from file...
+2024-12-10 12:17:30 [main] INFO  c.o.e.u.f.ConfigurationIO - Config loaded successfully
+2024-12-10 12:17:30 [main] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully loaded: UserConfigurations{totalTickets=10, ticketReleaseRate=2, customerRetrievalRate=2, maxTicketCapacity=5}
+2024-12-10 12:17:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-10 12:17:32 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-10 12:17:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-10 12:17:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-10 12:17:32 [main] INFO  c.o.e.EventTicketServiceApplication - Started EventTicketServiceApplication in 8.424 seconds (process running for 9.329)
+2024-12-10 12:17:35 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 12:17:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-10 12:17:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-10 12:18:20 [http-nio-8080-exec-9] INFO  c.o.e.c.C.ConfigurationManager - Updating user configurations...
+2024-12-10 12:18:20 [http-nio-8080-exec-9] INFO  c.o.e.u.f.ConfigurationIO - Config saved successfully
+2024-12-10 12:18:20 [http-nio-8080-exec-9] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 12:18:20 [http-nio-8080-exec-9] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 12:18:20 [http-nio-8080-exec-9] INFO  c.o.e.c.C.ConfigurationManager - User configurations successfully saved and dependencies updated: UserConfigurations{totalTickets=100, ticketReleaseRate=10, customerRetrievalRate=10, maxTicketCapacity=50}
+2024-12-10 12:18:20 [http-nio-8080-exec-9] INFO  c.o.e.c.c.UserConfigurationsController - User configurations updated successfully
+2024-12-10 12:18:38 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Updating dependent systems with new configuration...
+2024-12-10 12:18:38 [main] INFO  c.o.e.c.C.ConfigurationUpdater - Dependent systems updated successfully.
+2024-12-10 12:18:38 [main] INFO  c.o.e.s.t.ThreadHandler - Starting 10 producer threads...
+2024-12-10 12:18:38 [main] INFO  c.o.e.s.t.ThreadHandler - Starting 9 consumer threads...
+2024-12-10 12:18:40 [Consumer-7] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:43 [Producer-2] INFO  c.o.e.s.t.producer.TicketProducer - Vendor Bergstrom-Hills | produced ticket: Ticket{id=2, name='The Lathe of Heaven', price=335}
+2024-12-10 12:18:43 [Consumer-7] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Kiersten Roberts | consumed ticket: The Lathe of Heaven
+2024-12-10 12:18:44 [Producer-6] INFO  c.o.e.s.t.producer.TicketProducer - Vendor Schaden-Gusikowski | produced ticket: Ticket{id=3, name='Blood's a Rover', price=489}
+2024-12-10 12:18:46 [Consumer-3] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Ms. Carlee Herzog | consumed ticket: Blood's a Rover
+2024-12-10 12:18:47 [Consumer-0] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:55 [Consumer-8] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:56 [Consumer-2] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:58 [Consumer-2] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:58 [Producer-5] INFO  c.o.e.s.t.producer.TicketProducer - Vendor Kohler-Weber | produced ticket: Ticket{id=5, name='An Instant In The Wind', price=247}
+2024-12-10 12:18:58 [Consumer-8] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:58 [Consumer-0] INFO  c.o.e.s.t.consumer.TicketConsumer - Customer Gene Zboncak | consumed ticket: An Instant In The Wind
+2024-12-10 12:18:58 [Consumer-1] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:58 [Consumer-5] INFO  c.o.e.core.ticket.TicketPool - Ticket pool is empty. Waiting to retrieve ticket.
+2024-12-10 12:18:59 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-10 12:18:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-10 12:18:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
