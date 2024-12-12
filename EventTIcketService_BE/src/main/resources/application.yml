@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-      name: e-ticket
+      name: eventTicketingSystem
   datasource:
     url: jdbc:mysql://localhost:3306/eventTicketingSystem?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
     username: root
